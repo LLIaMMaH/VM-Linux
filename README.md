@@ -14,9 +14,7 @@ yum -y install wget
 ```
 
 
-
-
-`swap_create.sh` - Создание swap файла (файла подкачки)
+## `swap_create.sh` - Создание swap файла (файла подкачки) ##
 Создаётся файл `swapfile` заданного размера в корне системы, подключается к системе и добавляется в `/etc/fstab`.
 
 **Скачать и сразу выполнить:**
@@ -33,4 +31,14 @@ curl -O https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh
 ```
 ```bash
 wget https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh
+```
+
+
+## `install_1.sh` - Установим необходимый софт ##
+**Скачать и сразу выполнить:**
+```bash
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sudo bash
+```
+```bash
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sudo bash
 ```

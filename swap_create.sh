@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipefail
          
 command_exists() {
     command -v "$@" > /dev/null 2>&1
