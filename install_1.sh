@@ -21,9 +21,9 @@ EOF
 fi
 
 
-$sh_c 'sudo apt update && full-upgrade -y'
-$sh_c 'sudo apt install mc htop zip unzip screenfetch zsh curl wget git -y'
-$sh_c 'sudo chsh -s $(which zsh) $USER'
+$sh_c 'apt update && apt full-upgrade -y'
+$sh_c 'apt install mc htop zip unzip screenfetch zsh curl wget git -y'
+$sh_c 'chsh -s $(which zsh) $USER'
 $sh_c 'curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh'
 $sh_c 'git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting'
 $sh_c 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
