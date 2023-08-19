@@ -42,3 +42,13 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | 
 ```bash
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sudo bash
 ```
+
+## `install_2.sh` - Настройка zsh оболочки ##
+До скачивания и запуска скрипта нужно запустить оболочку `zsh` и выбрать вариант хранения настроек.
+**Скачать и сразу выполнить:**
+```bash
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_2.sh | sudo bash
+```
+```bash
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_2.sh | sudo bash
+```
