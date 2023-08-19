@@ -23,14 +23,11 @@ fi
 
 $sh_c 'apt update && apt full-upgrade -y'
 $sh_c 'apt install mc htop zip unzip screenfetch zsh curl wget git -y'
-$sh_c 'chsh -s $(which zsh) $USER'
-$sh_c 'curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh'
-$sh_c 'git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting'
-$sh_c 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
 
 $sh_c 'curl -fsSL https://get.docker.com -o get-docker.sh'
 $sh_c 'sh ./get-docker.sh'
-$sh_c 'sudo usermod -aG docker $USER'
+$sh_c 'usermod -aG docker $USER'
 $sh_c 'docker --version'
 $sh_c 'docker compose version'
+$sh_c "echo 'Don\'t forget to reboot your system'"
 
