@@ -19,13 +19,13 @@ yum -y install wget
 
 **Скачать и сразу выполнить:**
 ```bash
-curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh | sudo bash
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh | sudo sh
 ```
 ```bash
-wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh | sudo bash
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh | sudo sh
 ```
 
-Если нужно изменить размер swap файла (по умолчанию 6 Gb), то можно **просто скачать файл**, отредактировать и выполнить его:
+Если нужно изменить размер swap файла (по умолчанию 6 Gb), то можно **задать его при выполнении скрипта** (Например: `swap_create.sh 10` создаст файл подкачки 10Гб):
 ```bash
 curl -O https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh
 ```
@@ -34,13 +34,13 @@ wget https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh
 ```
 
 
-## `install_1.sh` - Установим необходимый софт ##
+## `install_1.sh` - Обновим систему и установим необходимый софт ##
 **Скачать и сразу выполнить:**
 ```bash
-curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sudo bash
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sh
 ```
 ```bash
-wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sudo bash
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sh
 ```
 
 ## `install_2.sh` - Установка Docker и Docker Compose ##
