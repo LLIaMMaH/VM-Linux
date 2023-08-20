@@ -1,6 +1,15 @@
 #!/bin/bash
 #set -eo pipefail
 
+Green='\e[1;32m'
+Yellow='\e[1;33m'
+White='\e[1;37m'
+End='\e[0m'
+
+notice() {
+  echo " $Yellow♦$Green $1 $End"
+}
+
 command_exists() {
     command -v "$@" > /dev/null 2>&1
 }
@@ -11,7 +20,10 @@ then
   swsize=6
 fi
 
-echo "swapfile size = $swsize Gb"
+echo "\n"
+notice "============================================"
+notice "swapfile size = ${swsize} Gb"
+
 
 sh_c='sh -c'
 if [ "$user" != 'root' ]; then

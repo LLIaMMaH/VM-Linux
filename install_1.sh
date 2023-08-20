@@ -22,7 +22,7 @@ if [ "$user" != 'root' ]; then
         sh_c='su -c'
     else
         cat >&2 <<-'EOF'
-        Error: this installer needs the ability to run commands as root.
+        Error: this script needs the ability to run commands as root.
         We are unable to find either "sudo" or "su" available to make this happen.
 EOF
         exit 1
@@ -33,14 +33,6 @@ echo "\n\n"
 notice "============================================"
 $sh_c 'apt update && apt full-upgrade -y'
 $sh_c 'apt install mc htop zip unzip screenfetch zsh curl wget git -y'
-
-echo "\n\n"
-notice "============================================"
-$sh_c 'curl -fsSL https://get.docker.com -o get-docker.sh'
-$sh_c 'sh ./get-docker.sh'
-$sh_c 'usermod -aG docker $USER'
-$sh_c 'docker --version'
-$sh_c 'docker compose version'
 
 notice "============================================"
 notice "=== $White Don't forget to reboot your system $Green ==="

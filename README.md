@@ -43,12 +43,21 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | 
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sudo bash
 ```
 
-## `install_2.sh` - Настройка zsh оболочки ##
+## `install_2.sh` - Установка Docker и Docker Compose ##
+**Скачать и сразу выполнить:**
+```bash
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_2.sh | sh
+```
+```bash
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_2.sh | sh
+```
+
+## `install_3.sh` - Настройка zsh оболочки ##
 До скачивания и запуска скрипта нужно запустить оболочку `zsh` и выбрать вариант хранения настроек.
 **Скачать и сразу выполнить:**
 ```bash
-curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_2.sh | sudo bash
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_3.sh | sh
 ```
 ```bash
-wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_2.sh | sudo bash
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_3.sh | sh
 ```
