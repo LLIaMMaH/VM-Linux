@@ -69,5 +69,5 @@ wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_3.sh 
 curl -O https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.zshrc
 ```
 ```bash
-wget https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.zshrc
+wget -O .zshrc https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.zshrc
 ```
