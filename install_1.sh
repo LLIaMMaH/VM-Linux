@@ -1,6 +1,15 @@
 #!/bin/bash
-set -eo pipefail
-         
+#set -eo pipefail
+
+Green='\e[1;32m'
+Yellow='\e[1;33m'
+White='\e[1;37m'
+End='\e[0m'
+
+notice() {
+  echo " $Yellow♦$Green $1 $End"
+}
+
 command_exists() {
     command -v "$@" > /dev/null 2>&1
 }
@@ -20,14 +29,22 @@ EOF
     fi
 fi
 
-
+echo "\n\n"
+notice "============================================"
 $sh_c 'apt update && apt full-upgrade -y'
 $sh_c 'apt install mc htop zip unzip screenfetch zsh curl wget git -y'
 
+echo "\n\n"
+notice "============================================"
 $sh_c 'curl -fsSL https://get.docker.com -o get-docker.sh'
 $sh_c 'sh ./get-docker.sh'
 $sh_c 'usermod -aG docker $USER'
 $sh_c 'docker --version'
 $sh_c 'docker compose version'
-$sh_c "echo 'Don\'t forget to reboot your system'"
+
+notice "============================================"
+notice "=== $White Don't forget to reboot your system $Green ==="
+notice "=== $White Не забудьте перезагрузить систему  $Green ==="
+notice "=== $White Usage: sudo reboot                 $Green ==="
+notice "============================================"
 
