@@ -61,3 +61,13 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_3.sh | 
 ```bash
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_3.sh | sh
 ```
+
+---
+
+## Чтобы не делать настройки каждый раз, мои файлы с настройками ##
+```bash
+curl -O https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.zshrc
+```
+```bash
+wget https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.zshrc
+```
