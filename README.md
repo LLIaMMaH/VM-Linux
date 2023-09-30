@@ -6,11 +6,11 @@
 
 **Для Debian/Ubuntu/LinuxMint/и другие дистрибутивы на базе Debian**
 ```bash
-sudo apt install wget -y
+sudo apt install curl wget -y
 ```
 **Для Centos/Fedora**
 ```bash
-yum -y install wget
+yum -y install curl wget
 ```
 
 
@@ -35,6 +35,15 @@ wget https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh
 
 
 ## `install_1.sh` - Обновим систему и установим необходимый софт ##
+В перечень необходимого софта входит следующее:
+[mc](https://midnight-commander.org) - Midnight Commander
+[htop](https://htop.dev) - Htop
+[zip](https://en.wikipedia.org/wiki/Info-ZIP) и [unzip](https://infozip.sourceforge.net/UnZip.html) - ZIP и UnZip
+[curl](https://curl.se) и [wget](https://www.gnu.org/software/wget/) - curl и Wget
+[screenfetch](https://github.com/KittyKatt/screenFetch) - Screenfetch
+[git](https://git-scm.com) - git
+[zsh](https://www.zsh.org) - Zsh
+[tmux](https://github.com/tmux/tmux/wiki) - tmux
 **Скачать и сразу выполнить:**
 ```bash
 curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sh
@@ -46,20 +55,20 @@ wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh 
 ## `install_2.sh` - Установка Docker и Docker Compose ##
 **Скачать и сразу выполнить:**
 ```bash
-curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_2.sh | sh
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_docker.sh | sh
 ```
 ```bash
-wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_2.sh | sh
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_docker.sh | sh
 ```
 
 ## `install_3.sh` - Настройка zsh оболочки ##
 До скачивания и запуска скрипта нужно запустить оболочку `zsh` и выбрать вариант хранения настроек.
 **Скачать и сразу выполнить:**
 ```bash
-curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_3.sh | sh
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/setup_zsh.sh | sh
 ```
 ```bash
-wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_3.sh | sh
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/setup_zsh.sh | sh
 ```
 
 ---
@@ -104,8 +113,8 @@ tmux source-file ~/.tmux.conf
 и вернувшись в сессию сможете перегружать настройки.
 Так же можно скачать уже готовый файл с настройками.
 ```bash
-curl -O https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.tmux.conf
+curl -o ~/.tmux/.tmux.conf https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.tmux.conf
 ```
 ```bash
-wget -O .tmux.conf https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.tmux.conf
+wget -O ~/.tmux/.tmux.conf https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.tmux.conf
 ```
