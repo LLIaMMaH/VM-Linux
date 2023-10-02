@@ -44,7 +44,6 @@ wget https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh
 * [screenfetch](https://github.com/KittyKatt/screenFetch) - Screenfetch
 * [git](https://git-scm.com) - git
 * [zsh](https://www.zsh.org) - Zsh
-* [tmux](https://github.com/tmux/tmux/wiki) - tmux
 
 **Скачать и сразу выполнить:**
 ```bash
@@ -83,7 +82,17 @@ curl -O https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.zshrc
 wget -O .zshrc https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.zshrc
 ```
 
-## Делаем tmux красивым. ##
+## Устанавливаем и делаем красивым tmux ##
+* [tmux](https://github.com/tmux/tmux/wiki) - tmux
+```bash
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/is_tmux.sh | sh
+```
+```bash
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/is_tmux.sh | sh
+```
+
+
+### А можно и только сделать tmux красивым. ###
 В домашней директории выполняем:
 ```bash
 $ git clone https://github.com/gpakosz/.tmux.git

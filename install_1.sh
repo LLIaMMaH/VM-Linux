@@ -32,7 +32,7 @@ fi
 echo "\n\n"
 notice "============================================"
 $sh_c 'apt update && apt full-upgrade -y'
-$sh_c 'apt install mc htop zip unzip curl wget screenfetch git zsh tmux -y'
+$sh_c 'apt install mc htop zip unzip curl wget screenfetch git zsh -y'
 
 notice "============================================"
 notice "=== $White Don't forget to reboot your system $Green ==="
