@@ -38,10 +38,10 @@ notice "=== $White Git clone tmux config              $Green ==="
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux
 
 notice "=== $White Download .tmux.conf file           $Green ==="
-wget -O ~/.tmux/.tmux.conf https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.tmux.conf
+wget -O ~/.tmux.conf.local https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.tmux.conf.local
 
 ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
-#cp ~/.tmux/.tmux.conf.local ~/
+cp ~/.tmux/.tmux.conf.local ~/.tmux.conf.local
 #tmux source-file ~/.tmux.conf
 source ~/.tmux.conf
 
