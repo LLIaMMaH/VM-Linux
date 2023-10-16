@@ -53,7 +53,7 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | 
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sh
 ```
 
-## `install_2.sh` - Установка Docker и Docker Compose ##
+## `install_docker.sh` - Установка Docker и Docker Compose ##
 **Скачать и сразу выполнить:**
 ```bash
 curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_docker.sh | sh
@@ -62,7 +62,7 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_docker.
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_docker.sh | sh
 ```
 
-## `install_3.sh` - Настройка zsh оболочки ##
+## `install_zsh.sh` - Настройка zsh оболочки ##
 До скачивания и запуска скрипта нужно запустить оболочку `zsh` и выбрать вариант хранения настроек.
 **Скачать и сразу выполнить:**
 ```bash

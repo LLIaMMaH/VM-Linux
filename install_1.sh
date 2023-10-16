@@ -31,7 +31,7 @@ fi
 
 echo "\n\n"
 notice "============================================"
-$sh_c 'apt update && apt full-upgrade -y'
+$sh_c 'apt update && apt full-upgrade -y && apt autoremove -y && apt autoclean -y'
 $sh_c 'apt install mc htop zip unzip curl wget screenfetch git zsh -y'
 
 notice "============================================"
