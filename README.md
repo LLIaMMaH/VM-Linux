@@ -106,6 +106,16 @@ tmux_conf_theme_status_left=" ❐ #S "
 tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}# , %R , %d %b | #{username}#{root} "
 
 ...
+```
+Ищем строку
+```text
+# -- user customizations -------------------------------------------------------
+```
+и в конце данного блока настроек добавляем
+```text
+# Start windows and panes at 1, not 0
+set -g base-index 1
+setw -g pane-base-index 1
 
 ```
 
