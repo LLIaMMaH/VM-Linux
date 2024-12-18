@@ -38,12 +38,19 @@ wget https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh
 В перечень необходимого софта входит следующее:
 
 * [mc](https://midnight-commander.org) - Midnight Commander
-* [htop](https://htop.dev) - Htop
+* [btop](https://github.com/aristocratos/btop?tab=readme-ov-file) - Btop
 * [zip](https://en.wikipedia.org/wiki/Info-ZIP) и [unzip](https://infozip.sourceforge.net/UnZip.html) - ZIP и UnZip
 * [curl](https://curl.se) и [wget](https://www.gnu.org/software/wget/) - curl и Wget
 * [screenfetch](https://github.com/KittyKatt/screenFetch) - Screenfetch
 * [git](https://git-scm.com) - git
 * [zsh](https://www.zsh.org) - Zsh
+
+
+
+Уже не использую:
+
+* [htop](https://htop.dev) - Htop
+
 
 **Скачать и сразу выполнить:**
 ```bash
