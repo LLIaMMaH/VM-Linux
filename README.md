@@ -1,8 +1,8 @@
 # VM-Linux
-Скрипты для установки ПО и настройки серверов в Proxmox
+Скрипты для установки ПО и быстрой настройки этого ПО в виртуальных машинах в Proxmox. Но можно и просто их использовать, в обычном дистрибутиве на базе `Debian`/`Ubuntu`/`LinuxMint`.  
 
-Для скачивания скриптом можно использовать консольные утилиты. Самые распространенные это `curl` и `wget`. Они как правило уже есть в большинстве дистрибутивов из коробки.
-Но если их нет, то их можно очень лешго доустановить.
+Для скачивания скриптов можно использовать консольные утилиты. Самые распространенные это `curl` и `wget`. Они как правило уже есть в большинстве дистрибутивов из коробки.  
+Но если их нет, то их можно очень лешго доустановить.  
 
 **Для Debian/Ubuntu/LinuxMint/и другие дистрибутивы на базе Debian**
 ```bash
@@ -15,7 +15,7 @@ yum -y install curl wget
 
 
 ## `swap_create.sh` - Создание swap файла (файла подкачки) ##
-Создаётся файл `swapfile` заданного размера в корне системы, подключается к системе и добавляется в `/etc/fstab`.
+Создаётся файл `swapfile` заданного размера в корне системы, подключается к системе и добавляется в `/etc/fstab`.  
 
 **Скачать и сразу выполнить:**
 ```bash
@@ -25,7 +25,7 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh 
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh | sudo sh
 ```
 
-Если нужно изменить размер swap файла (по умолчанию 6 Gb), то можно **задать его при выполнении скрипта** (Например: `swap_create.sh 10` создаст файл подкачки 10Гб):
+Если нужно изменить размер swap файла (по умолчанию 6 Gb), то можно **задать его при выполнении скрипта** (Например: `swap_create.sh 10` создаст файл подкачки 10Гб):  
 ```bash
 curl -O https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh
 ```
@@ -35,22 +35,15 @@ wget https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh
 
 
 ## `install_1.sh` - Обновим систему и установим необходимый софт ##
-В перечень необходимого софта входит следующее:
+В перечень необходимого софта входит следующее:  
 
-* [mc](https://midnight-commander.org) - Midnight Commander
-* [btop](https://github.com/aristocratos/btop?tab=readme-ov-file) - Btop
-* [zip](https://en.wikipedia.org/wiki/Info-ZIP) и [unzip](https://infozip.sourceforge.net/UnZip.html) - ZIP и UnZip
-* [curl](https://curl.se) и [wget](https://www.gnu.org/software/wget/) - curl и Wget
-* [screenfetch](https://github.com/KittyKatt/screenFetch) - Screenfetch
-* [git](https://git-scm.com) - git
-* [zsh](https://www.zsh.org) - Zsh
-
-
-
-Уже не использую:
-
-* [htop](https://htop.dev) - Htop
-
+* [mc](https://midnight-commander.org) - Midnight Commander  
+* [btop](https://github.com/aristocratos/btop?tab=readme-ov-file) - Btop  
+* [zip](https://en.wikipedia.org/wiki/Info-ZIP) и [unzip](https://infozip.sourceforge.net/UnZip.html) - ZIP и UnZip  
+* [curl](https://curl.se) и [wget](https://www.gnu.org/software/wget/) - curl и Wget  
+* [screenfetch](https://github.com/KittyKatt/screenFetch) - Screenfetch  
+* [git](https://git-scm.com) - git  
+* [zsh](https://www.zsh.org) - Zsh  
 
 **Скачать и сразу выполнить:**
 ```bash
@@ -59,6 +52,18 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | 
 ```bash
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sh
 ```
+
+## `tmux` - Нужен не везде, доставляем отдельно ##
+**Для Debian/Ubuntu/LinuxMint/и другие дистрибутивы на базе Debian**
+```bash
+sudo apt install tmux -y
+```
+
+
+**Уже не использую:**
+* [htop](https://htop.dev) - Htop
+
+
 
 ## `install_docker.sh` - Установка Docker и Docker Compose ##
 **Скачать и сразу выполнить:**
@@ -70,7 +75,7 @@ wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_docke
 ```
 
 ## `install_zsh.sh` - Настройка zsh оболочки ##
-До скачивания и запуска скрипта нужно запустить оболочку `zsh` и выбрать вариант хранения настроек.
+До скачивания и запуска скрипта нужно запустить оболочку `zsh` и выбрать вариант хранения настроек. Я выбираю вариант `2`, который сохранит настройки в `~/.zshrc` файл. Потом оболочку можно закрыть (я это делаю комбинацией клавиш `Ctrl+D` - exit).  
 **Скачать и сразу выполнить:**
 ```bash
 curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/setup_zsh.sh | sh
@@ -78,6 +83,12 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/setup_zsh.sh | 
 ```bash
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/setup_zsh.sh | sh
 ```
+
+Если вам не понравится тема, то её можно легко поменять. [Выберите тему](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes), которая вас устроит и пропишите её в файле `~/.zshrc`.
+```bash
+nano ~/.zshrc
+```
+Находит строку `ZSH_THEME="название_темы"` и меняем название на то, что вам нужно.
 
 ---
 
@@ -100,13 +111,13 @@ wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/is_tmux.sh | 
 
 
 ### А можно и только сделать tmux красивым. ###
-В домашней директории выполняем:
+В домашней директории выполняем:  
 ```bash
 $ git clone https://github.com/gpakosz/.tmux.git
 $ ln -s -f .tmux/.tmux.conf
 $ cp .tmux/.tmux.conf.local .
 ```
-Подстраиваем ~/.tmux.conf.local под себя.
+Подстраиваем ~/.tmux.conf.local под себя.  
 Исправляю строки
 ```
 tmux_conf_theme_status_left=" ❐ #S "
@@ -138,7 +149,7 @@ bind r source-file ~/.tmux.conf
 ```bash
 tmux source-file ~/.tmux.conf
 ```
-и вернувшись в сессию сможете перегружать настройки.
+и вернувшись в сессию сможете перегружать настройки.  
 Так же можно скачать уже готовый файл с настройками.
 ```bash
 curl -o ~/.tmux/.tmux.conf https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.tmux.conf
