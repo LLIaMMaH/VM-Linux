@@ -14,6 +14,7 @@ yum -y install curl wget
 ```
 
 
+---
 ## `swap_create.sh` - Создание swap файла (файла подкачки) ##
 Создаётся файл `swapfile` заданного размера в корне системы, подключается к системе и добавляется в `/etc/fstab`.  
 
@@ -34,6 +35,7 @@ wget https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/swap_create.sh
 ```
 
 
+---
 ## `install_1.sh` - Обновим систему и установим необходимый софт ##
 В перечень необходимого софта входит следующее:  
 
@@ -52,19 +54,13 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | 
 ```bash
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_1.sh | sh
 ```
-
-## `tmux` - Нужен не везде, доставляем отдельно ##
-**Для Debian/Ubuntu/LinuxMint/и другие дистрибутивы на базе Debian**
-```bash
-sudo apt install tmux -y
-```
-
+---
 
 **Уже не использую:**
 * [htop](https://htop.dev) - Htop
 
 
-
+---
 ## `install_docker.sh` - Установка Docker и Docker Compose ##
 **Скачать и сразу выполнить:**
 ```bash
@@ -74,6 +70,8 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_docker.
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/install_docker.sh | sh
 ```
 
+
+---
 ## `install_zsh.sh` - Настройка zsh оболочки ##
 До скачивания и запуска скрипта нужно запустить оболочку `zsh` и выбрать вариант хранения настроек. Я выбираю вариант `2`, который сохранит настройки в `~/.zshrc` файл. Потом оболочку можно закрыть (я это делаю комбинацией клавиш `Ctrl+D` - exit).  
 **Скачать и сразу выполнить:**
@@ -90,7 +88,6 @@ nano ~/.zshrc
 ```
 Находит строку `ZSH_THEME="название_темы"` и меняем название на то, что вам нужно.
 
----
 
 ## Чтобы не делать настройки каждый раз, мой файл с настройками для zsh. ##
 ```bash
@@ -100,6 +97,8 @@ curl -O https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.zshrc
 wget -O .zshrc https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.zshrc
 ```
 
+
+---
 ## Устанавливаем и делаем красивым tmux ##
 * [tmux](https://github.com/tmux/tmux/wiki) - tmux
 ```bash
