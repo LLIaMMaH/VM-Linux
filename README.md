@@ -156,3 +156,14 @@ curl -o ~/.tmux/.tmux.conf https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/m
 ```bash
 wget -O ~/.tmux/.tmux.conf https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/.tmux.conf
 ```
+
+
+## Мониторинг
+Установка `Node exporter` для сбора метрик.
+**Скачать и сразу выполнить:**
+```bash
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/files/prometheus_node_exporter.sh | sh
+```
+```bash
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/files/prometheus_node_exporter.sh | sh
+```
