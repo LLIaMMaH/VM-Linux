@@ -159,7 +159,7 @@ wget -O ~/.tmux/.tmux.conf https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/m
 
 
 ## Мониторинг
-Установка `Node exporter` для сбора метрик.
+Установка `Node exporter` для сбора метрик. Запускать от имени пользователя `root` или имеющего данные привелегии.  
 **Скачать и сразу выполнить:**
 ```bash
 curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/files/prometheus_node_exporter.sh | sh
