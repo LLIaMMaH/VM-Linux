@@ -167,3 +167,35 @@ curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/files/prometheu
 ```bash
 wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/files/prometheus_node_exporter.sh | sh
 ```
+
+## QEMU Guest Agent
+Перед установкой агента в гостевой ОС убедитесь, что он включён в настройках виртуальной машины:  
+1. Остановите ВМ (если она запущена).  
+2. В веб-интерфейсе Proxmox выберите ВМ → **Hardware** → **Options** → **QEMU Guest Agent** → включите галочку **Enable**.  
+3. Сохраните изменения и запустите ВМ.  
+
+### **Установка гостевого агента в Debian 12.10**
+1. Подключитесь к виртуальной машине (через консоль Proxmox или SSH).
+2. Обновите пакеты и установите `qemu-guest-agent`:
+```bash
+sudo apt update
+sudo apt install -y qemu-guest-agent
+```
+- Запустите службу и включите автозагрузку:
+```bash
+sudo systemctl start qemu-guest-agent
+sudo systemctl enable qemu-guest-agent
+```
+- Проверьте статус:
+```bash
+sudo systemctl status qemu-guest-agent
+```
+Должен быть статус **active (running)**.  
+
+**Скачать и сразу выполнить:**
+```bash
+curl -s https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/files/qemu_guest_agent.sh | sh
+```
+```bash
+wget -O - https://raw.githubusercontent.com/LLIaMMaH/VM-Linux/main/files/qemu_guest_agent.sh | sh
+```
