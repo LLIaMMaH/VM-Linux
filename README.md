@@ -6,7 +6,7 @@
 
 **Для Debian/Ubuntu/LinuxMint/и другие дистрибутивы на базе Debian**
 ```bash
-sudo apt install curl wget -y
+sudo apt install -y curl wget
 ```
 **Для Centos/Fedora**
 ```bash
